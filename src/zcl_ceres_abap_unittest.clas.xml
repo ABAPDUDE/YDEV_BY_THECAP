@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CERES_ABAP_UNITTEST</CLSNAME>
+    <LANGU>N</LANGU>
+    <DESCRIPT>CERES aanlevering</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>DETERMINE_PROCESSING_DATES</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>voor welke dag(en) de mutaties verwerken</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DISPLAY_LOG</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>display messages logging (SLG1)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_MUTATIONS_FROM_CERES</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>ophalen mutatie gegevens aanleveringen via CERES</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MC_TVARVC_DATE</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>laatste ophaaldatum volgens TVARVC</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_CERES_MUTATION</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>mutation details</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_PROCESSING_DATES</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>datum(s) te verwerken mutaties</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SAVE_MUTATION_2_DDIC</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>opslaan mutatie data aanlveringen CERES</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_MUTATIONS_FROM_CERES</CMPNAME>
+     <SCONAME>CX_AI_SYSTEM_FAULT</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Application Integration: Technischer Fehler</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_MUTATIONS_FROM_CERES</CMPNAME>
+     <SCONAME>RETURNING</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Booleaanse variabele (X=true, spatie=false)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_MUTATIONS_FROM_CERES</CMPNAME>
+     <SCONAME>ZFAULT_CX_FMT_GENERIC_FAULT</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Proxy Class (generated)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SAVE_MUTATION_2_DDIC</CMPNAME>
+     <SCONAME>ZCX_CERES_MUTATIES</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>error handling CERES mutaties</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

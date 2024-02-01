@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>YCL_TEST_EXCEPTIONS</CLSNAME>
+    <LANGU>N</LANGU>
+    <DESCRIPT>class based exceptions</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_CATCH</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>TRY.. CATCH.. ENDTRY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_CATCH_INTO</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>TRY.. CATCH INTO.. ENDTRY</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TEST_CATCH_SYSTEM_EXCEPTIONS</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>CATCH SYSTEM-EXCEPTIONS</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>TEST_CATCH</CMPNAME>
+     <SCONAME>CX_SY_CONVERSION_NO_NUMBER</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>System-Exception bei Umwandlung in eine Zahl</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TEST_CATCH_INTO</CMPNAME>
+     <SCONAME>CX_SY_CONVERSION_NO_NUMBER</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>System-Exception bei Umwandlung in eine Zahl</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

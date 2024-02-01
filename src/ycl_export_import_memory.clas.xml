@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>YCL_EXPORT_IMPORT_MEMORY</CLSNAME>
+    <LANGU>N</LANGU>
+    <DESCRIPT>Data naar geheugen exporteren importeren</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>EXPORT_ADRES_OUD_NIEUW</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>exporteren van oude en nieuwe adres gegevens</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>FREE_ADRES_OUD_NEW</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>maak attribuut initieel om hergebruik te voorkomen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IMPORT_ADRES_OUD_NIEUW</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>importeren van oude en nieuwe adres gegevens</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

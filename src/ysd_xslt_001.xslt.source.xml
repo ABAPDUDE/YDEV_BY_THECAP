@@ -1,0 +1,27 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates">
+
+  <tt:root name="FILE"/>
+
+  <tt:template>
+    <File tt:ref=".FILE"> <!--FILE Needs to match name of RESULT variable in CALL TRANSFORMATION call-->
+      <Head tt:ref="HEAD">
+        <Name tt:value-ref="NAME"/>
+      </Head>
+      <Items>
+        <tt:loop ref="ITEMS">
+          <ITM>
+            <tt:group>
+              <tt:cond frq="?"><tt:attribute name="QTY" value-ref="QTY"/></tt:cond>
+              <tt:cond frq="?"><tt:attribute name="SOH" value-ref="SOH"/></tt:cond>
+              <tt:cond frq="?"><tt:attribute name="EAN" value-ref="EAN"/></tt:cond>
+              <tt:cond frq="?"><tt:attribute name="SOI" value-ref="SOI"/></tt:cond>
+              <tt:cond frq="?"><tt:attribute name="CAT" value-ref="CAT"/></tt:cond>
+            </tt:group>
+          </ITM>
+        </tt:loop>
+      </Items>
+    </File>
+  </tt:template>
+
+</tt:transform>

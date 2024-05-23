@@ -1,9 +1,9 @@
 *&---------------------------------------------------------------------*
-*& Report YMD_GIT0192
+*& Report YMD_GIT0193
 *&---------------------------------------------------------------------*
 *&
 *&---------------------------------------------------------------------*
-REPORT ymd_git0192.
+REPORT ymd_git0193.
 
 TYPES: BEGIN OF ty_msg_string,
          caseid      TYPE zde_cl_caseid,
@@ -49,37 +49,32 @@ lt_alv_string[] = lt_msg[].
 *lo_columns->set_optimize( ).
 *lo_alv->display( ).
 
-*LOOP AT lt_alv_string
-*  INTO DATA(ls_string).
+*DATA l_xml TYPE REF TO cl_xml_document .
+*DATA xml_out TYPE string.
 *
-*  WRITE /5 ls_string-bericht.
-*  SKIP 2.
-*  WRITE /5 ls_string-response.
-*  SKIP 2.
-*  WRITE /5 ls_string-bevestiging.
+*CREATE OBJECT l_xml.
+*
+*LOOP AT lt_alv_string
+* INTO DATA(ls_string).
+*
+*  CALL METHOD l_xml->parse_string
+*    EXPORTING
+*      stream = ls_string-bericht.   "   xml_out. " xml_out is the variable which is holding the xml string
+*
+*  CALL METHOD l_xml->display.
 *
 *ENDLOOP.
+" alternate option: you can use a custom control and show the xml using cl_gui_html_viewer class
 
-DATA(out) = cl_demo_output=>new(
-   )->begin_section( 'asJSON' ).
-DATA(writer) = cl_sxml_string_writer=>create(
-  type = if_sxml=>co_xt_json ).
+
+*DATA itab TYPE TABLE OF i WITH EMPTY KEY.
+
+*itab = VALUE #( ( 1 ) ( 2 ) ( 3 ) ).
+
 CALL TRANSFORMATION id SOURCE itab = lt_alv_string
-                       RESULT XML writer.
-DATA(json) = writer->get_output( ).
-out->write_json( json ).
+                       RESULT XML DATA(xml).
 
-"JSON-XML
-out->next_section( 'asJSON-XML' ).
-DATA(reader) = cl_sxml_string_reader=>create( json ).
-DATA(xml_writer) = cl_sxml_string_writer=>create( ).
-reader->next_node( ).
-reader->skip_node( xml_writer ).
-DATA(xml) = xml_writer->get_output( ).
-out->write_xml( xml ).
-
-*"asXML
-*out->next_section( 'asXML' ).
-*CALL TRANSFORMATION id SOURCE itab = lt_alv_string
-*                       RESULT XML xml.
-out->write_xml( xml )->display( ).
+cl_abap_browser=>show_xml( xml_xstring = xml
+                           title = | CASEID: { p_caseid } |
+                           size = 'XL'
+                           ).

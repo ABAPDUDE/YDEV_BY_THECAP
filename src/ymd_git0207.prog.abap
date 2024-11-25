@@ -9,7 +9,9 @@ DATA : currdate      LIKE sy-datum,
        backmonths(3) TYPE n,
        newdate       LIKE sy-datum.
 
-currdate = sy-datum.
+PARAMETERS p_date TYPE datum.
+
+currdate = p_date.
 backmonths = '1'.
 
 CALL FUNCTION 'CCM_GO_BACK_MONTHS'

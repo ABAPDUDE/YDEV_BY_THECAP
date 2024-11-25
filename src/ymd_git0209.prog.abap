@@ -62,3 +62,12 @@ LOOP AT input_main-meter_reading_response_schema-end_device_event
   ENDIF.
 
 ENDLOOP.
+
+
+DATA(go_data_eosupply) = zcl_factory_vzcfac=>get( )->build_workload_object_eosupply( ).
+
+IF go_data_eosupply IS BOUND.
+  go_data_eosupply->response_verbruik( it_xml_response = input_eosupply ).
+ELSE.
+  " geen object / klasse geinstancieerd
+ENDIF.

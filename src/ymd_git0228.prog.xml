@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>YMD_GIT0056</NAME>
+    <NAME>YMD_GIT0228</NAME>
     <SUBC>1</SUBC>
     <RLOAD>N</RLOAD>
     <FIXPT>X</FIXPT>
@@ -12,7 +12,7 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>SELECT table T005T</ENTRY>
+     <ENTRY>SAP UserID details</ENTRY>
      <LENGTH>18</LENGTH>
     </item>
    </TPOOL>

@@ -3,17 +3,18 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>YMD_GIT0056</NAME>
+    <NAME>YMD_GIT00AB</NAME>
+    <DBAPL>S</DBAPL>
     <SUBC>1</SUBC>
-    <RLOAD>N</RLOAD>
     <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>SELECT table T005T</ENTRY>
-     <LENGTH>18</LENGTH>
+     <ENTRY>SELECTION SCREEN PARAMETER WITH VALUE DESCRIPTION</ENTRY>
+     <LENGTH>49</LENGTH>
     </item>
    </TPOOL>
   </asx:values>

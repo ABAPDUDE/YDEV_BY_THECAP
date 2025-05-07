@@ -21,6 +21,8 @@ AT SELECTION-SCREEN OUTPUT.
 
   APPEND VALUE #( key  = 'ZPILOT_VZC_P5'
                   text = 'ZPILOT_VZC_P5' ) TO lt_list.
+  APPEND VALUE #( key  = 'ZCARM_VERBRUIKEN'
+                  text = 'ZCARM_VERBRUIKEN' ) TO lt_list.
 
   CALL FUNCTION 'VRM_SET_VALUES'
     EXPORTING
@@ -103,17 +105,26 @@ FORM do_lijst .
           CREATE DATA dref TYPE STANDARD TABLE OF (p_tabl) WITH NON-UNIQUE DEFAULT KEY.
           ASSIGN dref->* TO <lt_table>.
       ENDTRY.
-      SELECT * FROM (p_tabl) INTO TABLE @<lt_table> WHERE ean IN @s_ean.
 
+      CASE p_tabl.
+        WHEN 'ZPILOT_VZC_P5'.
+
+          SELECT * FROM (p_tabl) INTO TABLE @<lt_table> WHERE ean IN @s_ean.
+        WHEN 'ZCARM_VERBRUIKEN'.
+
+          SELECT * FROM (p_tabl) INTO TABLE @<lt_table> WHERE eanid IN @s_ean.
+
+        WHEN OTHERS.
+      ENDCASE.
 *--------------------------------------------------------------------*
 *--   show one
 
       IF sy-subrc EQ 0 AND lines( <lt_table> ) EQ 1.
-        ASSIGN COMPONENT 'INPUT_RESPONSE' OF STRUCTURE <lt_table>[ 1 ] TO FIELD-SYMBOL(<ls_xml_input>).
+        ASSIGN COMPONENT 'XML_RESPONSE' OF STRUCTURE <lt_table>[ 1 ] TO FIELD-SYMBOL(<ls_xml_input>).
         IF <ls_xml_input> IS ASSIGNED.
           PERFORM show_xml USING <ls_xml_input>.
         ENDIF.
-        ASSIGN COMPONENT 'INPUT_READING' OF STRUCTURE <lt_table>[ 1 ] TO FIELD-SYMBOL(<ls_xml_reading>).
+        ASSIGN COMPONENT 'XML_DATA' OF STRUCTURE <lt_table>[ 1 ] TO FIELD-SYMBOL(<ls_xml_reading>).
         IF <ls_xml_reading> IS ASSIGNED.
           PERFORM show_xml USING <ls_xml_reading>.
         ENDIF.

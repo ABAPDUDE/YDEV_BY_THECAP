@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>YMD_GIT0056</NAME>
+    <NAME>YMD_GIT0233</NAME>
     <SUBC>1</SUBC>
     <RLOAD>N</RLOAD>
     <FIXPT>X</FIXPT>
@@ -12,8 +12,15 @@
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>SELECT table T005T</ENTRY>
-     <LENGTH>18</LENGTH>
+     <ENTRY>Lijst met Verbruiksplaatsen per Zakenpartner</ENTRY>
+     <LENGTH>44</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ZP</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
     </item>
    </TPOOL>
   </asx:values>

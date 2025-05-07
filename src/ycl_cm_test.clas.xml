@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>YCL_CM_TEST</CLSNAME>
+    <LANGU>N</LANGU>
+    <DESCRIPT>Congestie Management test</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>constructor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CREATE_CM_INSTALLATION</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Installatie aanmeken voor CM Product met MDG</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_END_DATE</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Veld van type DATS</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GV_START_DATE</CMPNAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Veld van type DATS</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_END_DATE</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Veld van type DATS</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_START_DATE</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>Veld van type DATS</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CREATE_CM_INSTALLATION</CMPNAME>
+     <SCONAME>IS_INPUT</SCONAME>
+     <LANGU>N</LANGU>
+     <DESCRIPT>input class for ZCL_CM_PRODUCTS</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

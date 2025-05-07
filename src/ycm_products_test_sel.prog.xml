@@ -3,17 +3,19 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <PROGDIR>
-    <NAME>YMD_GIT0056</NAME>
-    <SUBC>1</SUBC>
-    <RLOAD>N</RLOAD>
+    <NAME>YCM_PRODUCTS_TEST_SEL</NAME>
+    <DBAPL>S</DBAPL>
+    <DBNA>D$</DBNA>
+    <SUBC>I</SUBC>
     <FIXPT>X</FIXPT>
+    <LDBNAME>D$S</LDBNAME>
     <UCCHECK>X</UCCHECK>
    </PROGDIR>
    <TPOOL>
     <item>
      <ID>R</ID>
-     <ENTRY>SELECT table T005T</ENTRY>
-     <LENGTH>18</LENGTH>
+     <ENTRY>Selection Screen CM Products</ENTRY>
+     <LENGTH>28</LENGTH>
     </item>
    </TPOOL>
   </asx:values>
